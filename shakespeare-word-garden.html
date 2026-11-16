@@ -33,7 +33,6 @@
       background-size: 24px 24px;
     }
 
-    /* Header */
     header {
       text-align: center;
       padding: 4rem 1.5rem 2.5rem;
@@ -65,7 +64,6 @@
       color: var(--ink-secondary);
     }
 
-    /* Alphabet Nav */
     .alpha-nav {
       position: sticky;
       top: 0;
@@ -113,7 +111,6 @@
       border-color: var(--border-line);
     }
 
-    /* Main Grid */
     main {
       max-width: 1100px;
       margin: 3rem auto;
@@ -131,7 +128,6 @@
       display: flex;
       flex-direction: column;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
     }
 
     .lexicon-card:hover {
@@ -139,23 +135,25 @@
       box-shadow: 0 12px 28px rgba(31, 28, 24, 0.08);
     }
 
-    .card-image-wrap {
+    .card-art-wrap {
       position: relative;
-      height: 200px;
+      height: 190px;
+      background: #231E1A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       overflow: hidden;
-      background: #2C2621;
+      border-bottom: 1px solid var(--border-line);
     }
 
-    .card-image-wrap img {
+    .card-art-wrap svg {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      filter: sepia(0.35) contrast(1.05);
       transition: transform 0.5s ease;
     }
 
-    .lexicon-card:hover .card-image-wrap img {
-      transform: scale(1.05);
+    .lexicon-card:hover .card-art-wrap svg {
+      transform: scale(1.06);
     }
 
     .letter-badge {
@@ -171,7 +169,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid rgba(255,255,255,0.3);
+      border: 1px solid rgba(255,255,255,0.35);
+      z-index: 2;
     }
 
     .card-body {
@@ -262,6 +261,7 @@
       font-size: 0.82rem;
       color: var(--accent-gold);
       font-weight: 600;
+      gap: 0.5rem;
     }
 
     .quote-play {
@@ -271,6 +271,7 @@
       cursor: pointer;
       font-size: 0.85rem;
       text-decoration: underline;
+      white-space: nowrap;
     }
 
     footer {
@@ -305,68 +306,316 @@
   <script>
     const lexiconData = [
       {
-        letter: "A",
-        word: "Anon",
-        phonetic: "/əˈnɒn/ · adv.",
+        letter: "A", word: "Anon", phonetic: "/əˈnɒn/ · adv.",
         meaning: "即刻、馬上、稍後就來",
         nuance: "酒館侍者與僕人最常掛在嘴邊的急促回應，帶著一絲戲劇性的匆忙感。",
         quoteEn: "“Anon, anon, sir! Score a pint of bastard in the Half-moon.”",
         quoteZh: "「馬上來，先生！半月廳記上一品脫甜酒。」",
         play: "《亨利四世：第一部》Henry IV, Part 1",
-        img: "https://unsplash.com"
+        motif: "hourglass"
       },
       {
-        letter: "B",
-        word: "Beguile",
-        phonetic: "/bɪˈɡaɪl/ · v.",
+        letter: "B", word: "Beguile", phonetic: "/bɪˈɡaɪl/ · v.",
         meaning: "迷住、誘惑、欺瞞",
         nuance: "比單純的欺騙更富詩意，指用魅力與幻象讓人甘願沉淪。",
         quoteEn: "“So shall I taste thy horse’s tripe, and beguile the time.”",
         quoteZh: "「如此我便能消磨時光，讓歲月在不知不覺中流逝。」",
         play: "《第十二夜》Twelfth Night",
-        img: "https://unsplash.com"
+        motif: "mask"
       },
       {
-        letter: "C",
-        word: "Chide",
-        phonetic: "/tʃaɪd/ · v.",
+        letter: "C", word: "Chide", phonetic: "/tʃaɪd/ · v.",
         meaning: "責備、輕聲埋怨",
         nuance: "常見於戀人之間的嗔怪，或大自然對人類狂妄的溫柔訓誡。",
         quoteEn: "“Chide him for faults, and do it reverently.”",
         quoteZh: "「責備他的過失，但要懷著敬意。」",
         play: "《亨利四世：第二部》Henry IV, Part 2",
-        img: "https://unsplash.com"
+        motif: "quill"
       },
       {
-        letter: "D",
-        word: "Dalliance",
-        phonetic: "/ˈdæl.i.əns/ · n.",
+        letter: "D", word: "Dalliance", phonetic: "/ˈdæl.i.əns/ · n.",
         meaning: "調情、嬉戲、虛度光陰",
         nuance: "帶著文藝復興時期宮廷的慵懶氣息，暗示危險卻迷人的耽溺。",
-        quoteEn: "“Do not, as some ungracious pastors do, show me the steep and thorny way to heaven, whiles, like a puffed and reckless libertine, himself the primrose path of dalliance treads.”",
-        quoteZh: "「別像某些偽善牧師，指給我看通往天堂的荊棘險路，自己卻踏上鋪滿櫻草花的享樂小徑。」",
+        quoteEn: "“Himself the primrose path of dalliance treads.”",
+        quoteZh: "「自己卻踏上鋪滿櫻草花的享樂小徑。」",
         play: "《哈姆雷特》Hamlet",
-        img: "https://unsplash.com"
+        motif: "rose"
       },
       {
-        letter: "E",
-        word: "Ere",
-        phonetic: "/eər/ · prep. / conj.",
+        letter: "E", word: "Ere", phonetic: "/eər/ · prep. / conj.",
         meaning: "在……之前",
         nuance: "比 before 更具宿命與悲劇色彩，常出現在暴風雨或決戰前夕。",
-        quoteEn: "“When shall we three meet again? In thunder, lightning, or in rain? — When the hurlyburly’s done, when the battle’s lost and won. That will be ere the set of sun.”",
-        quoteZh: "「我們三個何時再聚？在雷鳴、閃電還是雨中？——等紛擾平息，勝負已分，就在日落之前。」",
+        quoteEn: "“That will be ere the set of sun.”",
+        quoteZh: "「那將會發生在日落之前。」",
         play: "《馬克白》Macbeth",
-        img: "https://unsplash.com"
+        motif: "sun"
       },
       {
-        letter: "F",
-        word: "Fie",
-        phonetic: "/faɪ/ · interj.",
+        letter: "F", word: "Fie", phonetic: "/faɪ/ · interj.",
         meaning: "呸！真羞恥！豈有此理！",
         nuance: "文青表達厭惡或道德憤慨時的最高級古典感嘆詞。",
         quoteEn: "“Fie on’t! ah fie! ’Tis an unweeded garden that grows to seed.”",
         quoteZh: "「真令人作嘔！這世界就像一座荒蕪的花園，長滿了雜草。」",
         play: "《哈姆雷特》Hamlet",
-        img: "https://unsplash.com"
+        motif: "dagger"
       },
+      {
+        letter: "G", word: "Gossamer", phonetic: "/ˈɡɒs.ə.mər/ · n.",
+        meaning: "游絲、輕如蟬翼之物",
+        nuance: "形容極致輕盈、脆弱卻閃耀微光的愛戀與夢境。",
+        quoteEn: "“A lover may bestride the gossamer that idles in the wanton summer air.”",
+        quoteZh: "「戀人可以踏在夏日微風中飄蕩的游絲上而不墜落。」",
+        play: "《羅密歐與茱麗葉》Romeo and Juliet",
+        motif: "moon"
+      },
+      {
+        letter: "H", word: "Hark", phonetic: "/hɑːk/ · v.",
+        meaning: "傾聽！聽啊！",
+        nuance: "喚起全場屏息的指令，彷彿夜晚城堡走廊傳來的腳步聲。",
+        quoteEn: "“Hark! What light through yonder window breaks? It is the east, and Juliet is the sun.”",
+        quoteZh: "「聽！那扇窗戶透出什麼光芒？那是東方，而茱麗葉就是太陽。」",
+        play: "《羅密歐與茱麗葉》Romeo and Juliet",
+        motif: "sun"
+      },
+      {
+        letter: "I", word: "Illume", phonetic: "/ɪˈljuːm/ · v.",
+        meaning: "照亮、啟迪",
+        nuance: "Shakespeare 獨創的詩意動詞，比 illuminate 更具星辰閃爍之感。",
+        quoteEn: "“Had made his course t’ illume that part of heaven where now it burns.”",
+quoteZh: "「運行到如今燃燒的位置，照亮那片天穹。」",
+play: "《哈姆雷特》Hamlet",
+motif: "star"
+},
+{
+letter: "J", word: "Jocund", phonetic: "/ˈdʒɒk.ənd/ · adj.",
+meaning: "歡愉的、明朗快活的",
+nuance: "帶著破曉時分的清澈喜悅，常與晨光、鳥鳴並置。",
+quoteEn: "“Night’s candles are burnt out, and jocund day stands tiptoe on the misty mountain tops.”",
+quoteZh: "「夜的燭火已燃盡，歡愉的白晝正踮起腳尖立於薄霧繚繞的山巔。」",
+play: "《羅密歐與茱麗葉》Romeo and Juliet",
+motif: "sun"
+},
+{
+letter: "K", word: "Knave", phonetic: "/neɪv/ · n.",
+meaning: "無賴、惡棍、卑鄙小人",
+nuance: "莎劇裡最痛快淋漓的罵人詞彙，既有階級嘲諷也帶點狡黠。",
+quoteEn: "“O, what a rogue and peasant slave am I!”",
+quoteZh: "「啊，我是多麼卑鄙的無賴與奴才！」",
+play: "《哈姆雷特》Hamlet",
+motif: "crown"
+},
+{
+letter: "L", word: "Languish", phonetic: "/ˈlæŋ.ɡwɪʃ/ · v.",
+meaning: "憔悴、相思成疾、消沉",
+nuance: "文青必備的憂鬱動詞，形容因愛或孤獨而日漸枯萎的狀態。",
+quoteEn: "“One desperate grief cures with another’s languish.”",
+quoteZh: "「以另一場相思的憔悴，治癒絕望的悲慟。」",
+play: "《羅密歐與茱麗葉》Romeo and Juliet",
+motif: "rose"
+},
+{
+letter: "M", word: "Melancholy", phonetic: "/ˈmel.ən.kɒl.i/ · n. / adj.",
+meaning: "憂鬱、黑膽汁式的沉思",
+nuance: "文藝復興時期視為天才與哲學家的氣質標誌，而非單純悲傷。",
+quoteEn: "“I can suck melancholy out of a song, as a weasel sucks eggs.”",
+quoteZh: "「我能從一首歌裡吸出憂鬱，就像黃鼠狼吸食鳥蛋一樣。」",
+play: "《皆大歡喜》As You Like It",
+motif: "skull"
+},
+{
+letter: "N", word: "Naught", phonetic: "/nɔːt/ · pron. / n.",
+meaning: "虛無、一無所有",
+nuance: "比 nothing 更沉重，帶著存在主義式的空無回響。",
+quoteEn: "“Naught’s had, all’s spent, where our desire is got without content.”",
+quoteZh: "「慾望得償卻心無所安，便是一無所得，徒然耗盡。」",
+play: "《馬克白》Macbeth",
+motif: "hourglass"
+},
+{
+letter: "O", word: "Oft", phonetic: "/ɒft/ · adv.",
+meaning: "時常、屢屢",
+nuance: "簡潔單音節，最適合寫進情詩與格言中的古典副詞。",
+quoteEn: "“Oft expectation fails, and most oft there where most it promises.”",
+quoteZh: "「期望時常落空，而最常落空之處，往往是承諾最美的地方。」",
+play: "《終成眷屬》All's Well That Ends Well",
+motif: "quill"
+},
+{
+letter: "P", word: "Prithee", phonetic: "/ˈprɪð.i/ · interj.",
+meaning: "拜託你、懇請（I pray thee 的縮寫）",
+nuance: "既溫柔又帶點無奈的請求語氣，比 please 多了三分戲劇張力。",
+quoteEn: "“Prithee, see there! behold! look! lo! how say you?”",
+quoteZh: "「拜託，看那邊！瞧啊！你怎麼說？」",
+play: "《馬克白》Macbeth",
+motif: "mask"
+},
+{
+letter: "Q", word: "Quoth", phonetic: "/kwəʊθ/ · v.",
+meaning: "說道、云（僅用於第一或第三人稱過去式）",
+nuance: "轉述哲人或傻瓜名言時的專屬動詞，自帶寓言感。",
+quoteEn: "“‘Lord, what fools these mortals be!’ quoth Puck.”",
+quoteZh: "「『天啊，這些凡人多麼愚蠢！』迫克如此說道。」",
+play: "《仲夏夜之夢》A Midsummer Night's Dream",
+motif: "moon"
+},
+{
+letter: "R", word: "Requiem", phonetic: "/ˈrek.wi.əm/ · n.",
+meaning: "安魂曲、鎮魂歌",
+nuance: "莊嚴而哀婉，象徵為逝去的愛情或靈魂獻上最後的平靜。",
+quoteEn: "“To sing a requiem and such rest to her as to peace-parted souls.”",
+quoteZh: "「為她唱安魂曲，如同對安息的靈魂般祈禱。」",
+play: "《哈姆雷特》Hamlet",
+motif: "skull"
+},
+{
+letter: "S", word: "Sooth", phonetic: "/suːθ/ · n. / adj.",
+meaning: "真實、真理（in sooth 即「說實話」）",
+nuance: "預言家與弄臣最愛用的字眼，揭穿表象底下的殘酷真相。",
+quoteEn: "“In sooth, I know not why I am so sad: It wearies me; you say it wearies you.”",
+quoteZh: "「說實話，我不知道自己為何如此憂傷；這讓我疲憊，你也說這令你厭煩。」",
+play: "《威尼斯商人》The Merchant of Venice",
+motif: "star"
+},
+{
+letter: "T", word: "Tempest", phonetic: "/ˈtem.pɪst/ · n.",
+meaning: "暴風雨、心靈的狂瀾",
+nuance: "既是自然界的驚濤駭浪，也是人間權力與寬恕的試煉場。",
+quoteEn: "“Hell is empty and all the devils are here.”",
+quoteZh: "「地獄空蕩蕩，惡魔全在人間。」",
+play: "《暴風雨》The Tempest",
+motif: "wave"
+},
+{
+letter: "U", word: "Unfledged", phonetic: "/ʌnˈfledʒd/ · adj.",
+meaning: "羽翼未豐的、涉世未深的",
+nuance: "比喻年輕人缺乏歷練的純真與魯莽，極具畫面感。",
+quoteEn: "“Do not dull thy palm with entertainment of each new-hatched, unfledged comrade.”",
+quoteZh: "「別為了應酬每個剛破殼、羽翼未豐的新朋友，而磨鈍了你的手掌。」",
+play: "《哈姆雷特》Hamlet",
+motif: "quill"
+},
+{
+letter: "V", word: "Visage", phonetic: "/ˈvɪz.ɪdʒ/ · n.",
+meaning: "容顏、面貌、神色",
+nuance: "比 face 更具雕塑感與戲劇性，常指偽裝下的真實表情。",
+quoteEn: "“Her visage was in my mind, and yet I saw it not.”",
+quoteZh: "「她的容顏烙印在我心頭，我卻未能親眼見著。」",
+play: "《奧賽羅》Othello",
+motif: "mask"
+},
+{
+letter: "W", word: "Wherefore", phonetic: "/ˈweə.fɔːr/ · adv.",
+meaning: "為何、為了什麼緣故（並非「在哪裡」）",
+nuance: "莎劇最常被誤解的經典詞！茱麗葉問的是「為什麼你偏偏姓蒙太古」。",
+quoteEn: "“O Romeo, Romeo! wherefore art thou Romeo? Deny thy father and refuse thy name.”",
+quoteZh: "「啊，羅密歐，羅密歐！你為什麼偏偏是羅密歐？否認你的父親，拋棄你的姓氏吧。」",
+play: "《羅密歐與茱麗葉》Romeo and Juliet",
+motif: "rose"
+},
+{
+letter: "X", word: "Xanthippe", phonetic: "/zænˈθɪp.i/ · n.",
+meaning: "悍婦（典出蘇格拉底之妻）",
+nuance: "X 開頭極罕見的古典專有名詞，展現莎士比亞信手拈來的希臘典故。",
+quoteEn: "“As curst and shrewd as Socrates’ Xanthippe, or a worse, she moves me not.”",
+quoteZh: "「就算她像蘇格拉底的妻子贊西佩那樣兇悍潑辣，也動搖不了我。」",
+play: "《馴悍記》The Taming of the Shrew",
+motif: "crown"
+},
+{
+letter: "Y", word: "Yonder", phonetic: "/ˈjɒn.dər/ · adj. / adv.",
+meaning: "彼處、遠方的那一邊",
+nuance: "伸手指向遠方地平線或城堡高塔的浪漫指示詞。",
+quoteEn: "“By yonder blessed moon I vow, that tips with silver all these fruit-tree tops—”",
+quoteZh: "「我指著遠方那輪聖潔的明月起誓，它為所有果樹梢頭鍍上了銀輝——」",
+play: "《羅密歐與茱麗葉》Romeo and Juliet",
+motif: "moon"
+},
+{
+letter: "Z", word: "Zany", phonetic: "/ˈzeɪ.ni/ · n. / adj.",
+meaning: "滑稽丑角、荒誕可笑的",
+nuance: "源自義大利即興喜劇（Commedia dell'arte）的丑角，莎翁將其引入英語世界。",
+quoteEn: "“I take these wise men, that crow so at these set kind of fools, no better than the fools’ zanies.”",
+quoteZh: "「在我看來，那些對著職業傻瓜得意洋洋的聰明人，不過是傻瓜的跟班丑角罷了。」",
+play: "《第十二夜》Twelfth Night",
+motif: "mask"
+}
+];
+// 內建古典版畫風格 SVG 圖騰生成器（永不 404）
+function getClassicalSVG(motif, letter) {
+const icons = {
+hourglass: <path d="M170 45 H230 M170 145 H230 M175 45 C175 85 225 105 225 145 M225 45 C225 85 175 105 175 145 M188 135 L212 135 L200 112 Z" stroke="#D4AF37" stroke-width="2" fill="none"/>,
+mask: <path d="M165 60 Q200 45 235 60 Q235 115 200 135 Q165 115 165 60 Z M180 82 Q188 76 195 82 M205 82 Q212 76 220 82 M186 108 Q200 118 214 108" stroke="#D4AF37" stroke-width="2" fill="none"/>,
+quill: <path d="M165 140 C180 100 205 65 238 45 C232 75 215 105 182 122 M165 140 L185 118" stroke="#D4AF37" stroke-width="2" fill="none"/>,
+rose: <circle cx="200" cy="82" r="22" stroke="#D4AF37" stroke-width="2" fill="none"/><path d="M190 82 Q200 68 210 82 Q200 96 190 82 M200 104 L200 145 M200 124 L218 114 M200 132 L182 122" stroke="#D4AF37" stroke-width="2" fill="none"/>,
+sun: <circle cx="200" cy="95" r="24" stroke="#D4AF37" stroke-width="2" fill="none"/><path d="M200 50 V62 M200 128 V140 M155 95 H167 M233 95 H245 M168 63 L177 72 M223 118 L232 127 M232 63 L223 72 M177 118 L168 127" stroke="#D4AF37" stroke-width="2"/>,
+dagger: <path d="M200 42 L208 105 L200 115 L192 105 Z M178 115 H222 M200 115 V142 M194 142 H206" stroke="#D4AF37" stroke-width="2" fill="none"/>,
+moon: <path d="M212 55 A38 38 0 1 0 212 135 A28 28 0 1 1 212 55 Z" stroke="#D4AF37" stroke-width="2" fill="none"/>,
+star: <polygon points="200,48 212,82 246,82 218,102 228,136 200,116 172,136 182,102 154,82 188,82" stroke="#D4AF37" stroke-width="1.8" fill="none"/>,
+crown: <path d="M162 122 L168 72 L188 95 L200 62 L212 95 L232 72 L238 122 Z M162 130 H238" stroke="#D4AF37" stroke-width="2" fill="none"/>,
+skull: <path d="M176 85 A24 24 0 1 1 224 85 C224 100 215 106 214 118 H186 C185 106 176 100 176 85 Z M188 118 V130 M200 118 V130 M212 118 V130" stroke="#D4AF37" stroke-width="2" fill="none"/><circle cx="191" cy="86" r="5" stroke="#D4AF37" stroke-width="1.8" fill="none"/><circle cx="209" cy="86" r="5" stroke="#D4AF37" stroke-width="1.8" fill="none"/>,
+wave: <path d="M150 85 Q175 65 200 85 T250 85 M150 108 Q175 88 200 108 T250 108" stroke="#D4AF37" stroke-width="2" fill="none"/>
+};
+return `
+
+
+
+
+
+
+
+
+
+
+${icons[motif] || icons.star}
+`;
+}
+const grid = document.getElementById('lexiconGrid');
+const alphaNav = document.getElementById('alphaNav');
+lexiconData.forEach(item => {
+const btn = document.createElement('button');
+btn.className = 'alpha-btn';
+btn.textContent = item.letter;
+btn.onclick = () => filterCards(item.letter, btn);
+alphaNav.appendChild(btn);
+});
+function renderCards(filterLetter = 'ALL') {
+grid.innerHTML = '';
+const filtered = filterLetter === 'ALL'
+? lexiconData
+: lexiconData.filter(d => d.letter === filterLetter);
+filtered.forEach(item => {
+const card = document.createElement('article');
+card.className = 'lexicon-card';
+card.innerHTML =  <div class="card-art-wrap"> <span class="letter-badge">${item.letter}</span> ${getClassicalSVG(item.motif, item.letter)} </div> <div class="card-body"> <div class="word-header"> <h2 class="word-title">${item.word}</h2> <button class="audio-btn" onclick="speakText('${item.word}')">🔊 單字發音</button> </div> <div class="phonetic">${item.phonetic}</div> <div class="meaning">${item.meaning}</div> <p class="nuance">${item.nuance}</p> <div class="quote-box"> <p class="quote-en">${item.quoteEn}</p> <p class="quote-zh">${item.quoteZh}</p> <div class="quote-footer"> <span>${item.play}</span> <button class="quote-play" onclick="speakText(\${item.quoteEn.replace(/[“”]/g, '')}`)">▶ 朗讀金句
+
+
+
+`;
+grid.appendChild(card);
+});
+}
+function filterCards(letter, clickedBtn) {
+document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
+if (clickedBtn) {
+clickedBtn.classList.add('active');
+} else {
+document.querySelector('.all-btn').classList.add('active');
+}
+renderCards(letter);
+}
+function speakText(text) {
+if (!('speechSynthesis' in window)) {
+alert('您的瀏覽器不支援語音朗讀功能。');
+return;
+}
+window.speechSynthesis.cancel();
+const utterance = new SpeechSynthesisUtterance(text);
+const voices = window.speechSynthesis.getVoices();
+const ukVoice = voices.find(v => v.lang.includes('en-GB')) || voices.find(v => v.lang.includes('en'));
+if (ukVoice) utterance.voice = ukVoice;
+utterance.lang = 'en-GB';
+utterance.rate = 0.88;
+window.speechSynthesis.speak(utterance);
+}
+window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+renderCards();
