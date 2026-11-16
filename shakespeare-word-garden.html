@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>莎士比亞字詞花園｜A–Z Literary Vocabulary</title>
+<style>
+:root{--ink:#263b32;--moss:#536e5a;--sage:#a9b99d;--paper:#f7f2e8;--gold:#b68b4c;--rose:#b87969;--muted:#788276}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Noto Serif TC","Songti TC",serif}
+header{padding:28px 20px 20px;text-align:center;background:linear-gradient(180deg,#e7ecdf,#f7f2e8)}
+.kicker{letter-spacing:4px;font:700 11px Arial,sans-serif;color:var(--moss)}
+h1{font-size:clamp(30px,5vw,48px);font-weight:500;margin:10px 0 5px;letter-spacing:2px}
+.subtitle{color:#6e786d;font-size:14px}
+.wrap{width:min(1040px,92%);margin:28px auto 55px}
+.intro{text-align:center;color:#6d776d;font-size:14px;line-height:1.8;margin:0 auto 22px;max-width:650px}
+.layout{display:grid;grid-template-columns:1fr 270px;gap:22px;align-items:start}
+.card{background:#fffdf8;border:1px solid #e7dfd0;border-radius:5px;box-shadow:0 14px 40px #3b49351a;overflow:hidden}
+.cardtop{height:8px;background:linear-gradient(90deg,#526d58,#b68b4c,#b87969)}
+.maincard{padding:clamp(22px,4vw,42px)}
+.card-meta{display:flex;justify-content:space-between;align-items:center;color:#8a8c7c;font:12px Arial,sans-serif;letter-spacing:1px}
+.word-art{height:180px;margin:22px 0 12px;border-radius:4px;background:radial-gradient(circle at 50% 55%,#f2e6ce,#e8ecdf 70%);display:grid;place-items:center;position:relative;overflow:hidden}
+.word-art:before,.word-art:after{content:"";position:absolute;border:1px solid #b7c3ad66;border-radius:50%;width:210px;height:210px}
+.word-art:after{width:270px;height:270px}
+.art-symbol{font-size:90px;z-index:1;filter:drop-shadow(0 7px 5px #5a644222)}
+.letter{font:700 13px Arial,sans-serif;color:var(--gold);letter-spacing:5px;text-align:center}
+.word{font-size:clamp(38px,7vw,58px);font-weight:500;text-align:center;margin:4px 0 2px;letter-spacing:1px}
+.ipa{text-align:center;color:#8b9185;font:14px Arial,sans-serif;margin-bottom:8px}
+.meaning{text-align:center;color:var(--moss);font-size:18px;margin-bottom:20px}
+.definition{max-width:540px;margin:0 auto 22px;text-align:center;line-height:1.8;color:#697267;font-size:14px}
+.quote{background:#f4f0e6;border-left:3px solid var(--gold);padding:19px 22px;margin:20px 0 8px;text-align:left}
+.quote-label{font:700 10px Arial,sans-serif;letter-spacing:2px;color:#9b8056;margin-bottom:9px}
+.quote-text{font-size:clamp(17px,2.5vw,21px);line-height:1.65;font-style:italic}
+.quote-source{font:12px Arial,sans-serif;color:#7b8378;margin-top:10px}
+.quote-note{font-size:13px;line-height:1.7;color:#737b70;margin-top:10px}
+.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px 0 4px}
+button{font-family:inherit;cursor:pointer}
+.audio{border:0;background:var(--moss);color:white;border-radius:3px;padding:12px 22px;font:700 14px Arial,sans-serif;letter-spacing:.5px}
+.audio:hover{background:#405b48}
+.audio.secondary{background:#b68b4c}
+.side{padding:20px}
+.side h2{font-size:18px;font-weight:500;margin:0 0 6px}
+.side p{font:12px Arial,sans-serif;color:#899084;margin:0 0 15px}
+.alphabet{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.alphabet button{border:1px solid #e3e2d7;background:#faf9f3;color:#657664;border-radius:3px;aspect-ratio:1;font:700 14px Arial,sans-serif}
+.alphabet button:hover{background:#e8eddf}
+.alphabet button.active{background:var(--moss);color:white;border-color:var(--moss)}
+.nav{display:flex;gap:8px;margin-top:18px}
+.nav button{flex:1;border:1px solid #d9dfd3;background:#fff;color:var(--moss);padding:11px 8px;border-radius:3px;font-size:13px}
+.nav button:disabled{opacity:.35;cursor:not-allowed}
+.progress{height:3px;background:#e9e6db;margin-top:18px}.progress span{display:block;height:100%;background:var(--gold);transition:width .2s}
+.foot{text-align:center;color:#93978b;font:11px Arial,sans-serif;margin-top:25px;line-height:1.8}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.side{order:-1}.alphabet{grid-template-columns:repeat(13,1fr)}.alphabet button{font-size:12px}.word-art{height:145px}.art-symbol{font-size:72px}}
+@media(max-width:430px){.alphabet{grid-template-columns:repeat(7,1fr)}}
+</style>
+</head>
+<body>
+<header>
+ <div class="kicker">THE SHAKESPEARE WORD GARDEN · A–Z</div>
+ <h1>莎士比亞字詞花園</h1>
+ <div class="subtitle">在經典劇本裡，收藏 26 個值得細讀的英文詞彙</div>
+</header>
+<main class="wrap">
+ <p class="intro">從一個字走進一段戲。看見詞彙的意象、聽見它的聲音，再讀讀莎士比亞如何讓這個字活在舞台上。</p>
+ <div class="layout">
+  <section class="card">
+   <div class="cardtop"></div>
+   <div class="maincard">
+    <div class="card-meta"><span id="index">WORD 01 / 26</span><span>SHAKESPEARE · A–Z</span></div>
+    <div class="word-art"><div class="art-symbol" id="symbol">👑</div></div>
+    <div class="letter" id="letter">A</div>
+    <h2 class="word" id="word">Ambition</h2>
+    <div class="ipa" id="ipa">/æmˈbɪʃ.ən/</div>
+    <div class="meaning" id="meaning">野心；抱負</div>
+    <p class="definition" id="definition">強烈想要成功、獲得權力或成就的渴望。在悲劇中，野心也可能成為人物走向毀滅的推力。</p>
+    <div class="quote">
+     <div class="quote-label">A LINE FROM THE PLAY</div>
+     <div class="quote-text" id="quote">“I have no spur<br>To prick the sides of my intent, but only<br>Vaulting ambition...”</div>
+     <div class="quote-source" id="source">— Macbeth, Act 1, Scene 7</div>
+     <div class="quote-note" id="note">麥克白明白自己沒有正當理由弒君，真正推動他的只有越界的野心。</div>
+    </div>
+    <div class="actions">
+     <button class="audio" id="speakWord">🔊 聽單字</button>
+     <button class="audio secondary" id="speakQuote">▶ 聽劇本金句</button>
+    </div>
+    <div class="nav">
+     <button id="prev">← 上一個詞</button>
+     <button id="next">下一個詞 →</button>
+    </div>
+    <div class="progress"><span id="progress" style="width:3.85%"></span></div>
+   </div>
+  </section>
+  <aside class="card side">
+   <h2>字母索引</h2><p>選擇 A–Z，探索不同詞彙</p>
+   <div class="alphabet" id="alphabet"></div>
+   <div class="foot">讀一個字，也讀一個角色的命運。<br>建議先聽發音，再朗讀例句。</div>
+  </aside>
+ </div>
+ <div class="foot">詞彙與引文選自莎士比亞經典劇作。引文採短句節錄；不同版本的拼字與標點可能略有差異。<br>語音由瀏覽器英文語音功能播放。</div>
+</main>
+<script>
+const entries = [
+{w:"Ambition",ipa:"/æmˈbɪʃ.ən/",m:"野心；抱負",d:"強烈想要成功、獲得權力或成就的渴望。在悲劇中，野心也可能成為人物走向毀滅的推力。",s:"👑",q:"I have no spur\\nTo prick the sides of my intent, but only\\nVaulting ambition...",p:"Macbeth, Act 1, Scene 7",n:"麥克白明白自己沒有正當理由弒君，真正推動他的只有越界的野心。"},
+{w:"Blood",ipa:"/blʌd/",m:"血；血液；血統",d:"既是生命的象徵，也常代表暴力、罪惡與無法洗去的罪責。",s:"🩸",q:"Will all great Neptune’s ocean wash this blood\\nClean from my hand?",p:"Macbeth, Act 2, Scene 2",n:"麥克白看著沾血的雙手，懷疑整個海洋是否足以洗去弒君的罪。"},
+{w:"Crown",ipa:"/kraʊn/",m:"王冠；王權",d:"象徵君主身分與權力，也暗示權力背後沉重的責任。",s:"👑",q:"Uneasy lies the head that wears a crown.",p:"Henry IV, Part 2, Act 3, Scene 1",n:"戴上王冠的人難以安睡，點出統治者承受的焦慮與重擔。"},
+{w:"Dream",ipa:"/driːm/",m:"夢；夢想",d:"可以是想像與希望，也可能讓現實顯得短暫、如幻似真。",s:"🌙",q:"We are such stuff\\nAs dreams are made on; and our little life\\nIs rounded with a sleep.",p:"The Tempest, Act 4, Scene 1",n:"普洛斯彼羅將人生比作夢境，提醒觀眾生命與幻象都稍縱即逝。"},
+{w:"Eternity",ipa:"/ɪˈtɜːr.nə.ti/",m:"永恆；無盡的時間",d:"超越有限生命的時間概念，常與愛、死亡及記憶相連。",s:"♾️",q:"So long as men can breathe or eyes can see,\\nSo long lives this, and this gives life to thee.",p:"Sonnet 18",n:"詩人相信，只要人仍能閱讀，詩就能讓所愛之人的美長存。"},
+{w:"Fate",ipa:"/feɪt/",m:"命運；宿命",d:"指似乎早已安排、難以逃避的人生走向。",s:"🧵",q:"O, I am fortune’s fool!",p:"Romeo and Juliet, Act 3, Scene 1",n:"羅密歐在悲劇發生後感嘆自己成了命運的玩物。"},
+{w:"Grace",ipa:"/ɡreɪs/",m:"優雅；恩典；寬恕",d:"可指舉止的優美，也可指仁慈、恩典或寬恕。",s:"🕊️",q:"The quality of mercy is not strained.",p:"The Merchant of Venice, Act 4, Scene 1",n:"鮑西婭談論慈悲，指出真正的寬恕不能被強迫。"},
+{w:"Honor",ipa:"/ˈɑː.nər/",m:"榮譽；尊嚴",d:"代表值得尊敬的品格、名聲與道德操守。",s:"⚔️",q:"Mine honour is my life; both grow in one.",p:"Richard II, Act 1, Scene 1",n:"榮譽與生命緊密相連，失去尊嚴就像失去自我。"},
+{w:"Ides",ipa:"/aɪdz/",m:"（古羅馬曆法）三月十五日",d:"源自古羅馬曆法；在莎士比亞作品中，常與預言及政治陰謀連結。",s:"🏛️",q:"Beware the ides of March.",p:"Julius Caesar, Act 1, Scene 2",n:"占卜者警告凱撒提防三月十五日，成為全劇命運將至的預兆。"},
+{w:"Jealousy",ipa:"/ˈdʒel.ə.si/",m:"嫉妒；猜忌",d:"因害怕失去所愛、地位或關係而產生的不安與猜疑。",s:"🦚",q:"O, beware, my lord, of jealousy!\\nIt is the green-eyed monster...",p:"Othello, Act 3, Scene 3",n:"伊阿古把嫉妒比作綠眼怪物，揭示猜忌如何吞噬理智。"},
+{w:"King",ipa:"/kɪŋ/",m:"國王；君主",d:"不只是王位上的人物，也承載權力、責任與道德抉擇。",s:"♔",q:"Uneasy lies the head that wears a crown.",p:"Henry IV, Part 2, Act 3, Scene 1",n:"這句話描寫國王看似尊貴、實則難以卸下的責任。"},
+{w:"Love",ipa:"/lʌv/",m:"愛；愛情",d:"莎士比亞筆下的愛既能帶來喜悅，也可能伴隨衝突、犧牲與悲傷。",s:"🌹",q:"The course of true love never did run smooth.",p:"A Midsummer Night’s Dream, Act 1, Scene 1",n:"愛情之路從不平順，這句話道出戀人必須面對的阻礙。"},
+{w:"Mercy",ipa:"/ˈmɜːr.si/",m:"慈悲；憐憫；寬恕",d:"對犯錯或受苦的人給予寬容，而非只用懲罰回應。",s:"🤲",q:"The quality of mercy is not strained.",p:"The Merchant of Venice, Act 4, Scene 1",n:"慈悲不是勉強而來，而是自然流露的善意。"},
+{w:"Nature",ipa:"/ˈneɪ.tʃər/",m:"自然；天性；本性",d:"可指自然世界，也可指人物與生俱來的性格或人性。",s:"🌿",q:"One touch of nature makes the whole world kin.",p:"Troilus and Cressida, Act 3, Scene 3",n:"共同的人性讓不同的人彼此相連，也提醒人們共享相似的情感。"},
+{w:"Oath",ipa:"/oʊθ/",m:"誓言；誓約",d:"具有承諾與責任意味的鄭重宣告。",s:"📜",q:"Swear by the moon, the inconstant moon...",p:"Romeo and Juliet, Act 2, Scene 2",n:"茱麗葉不希望羅密歐以變幻不定的月亮起誓，呈現她對真誠承諾的在意。"},
+{w:"Power",ipa:"/ˈpaʊ.ər/",m:"力量；權力",d:"可以是政治支配力，也可以是改變自己或世界的能力。",s:"⚡",q:"Uneasy lies the head that wears a crown.",p:"Henry IV, Part 2, Act 3, Scene 1",n:"王冠象徵權力，也讓人看見權力所帶來的壓力。"},
+{w:"Queen",ipa:"/kwiːn/",m:"女王；王后",d:"王室女性角色常在權力、愛情與政治之間做出艱難選擇。",s:"♕",q:"I am no queen; and you shall see me woman.",p:"Antony and Cleopatra, Act 5, Scene 2",n:"克麗奧佩脫拉在結局中面對王者身分與個人情感。"},
+{w:"Revenge",ipa:"/rɪˈvendʒ/",m:"復仇；報復",d:"因受傷或遭受不公而想要回擊，常推動莎劇中的悲劇情節。",s:"🗡️",q:"The time is out of joint: O cursed spite,\\nThat ever I was born to set it right!",p:"Hamlet, Act 1, Scene 5",n:"哈姆雷特感到世界失序，自己卻被迫承擔修正一切的責任。"},
+{w:"Sleep",ipa:"/sliːp/",m:"睡眠；安息",d:"既象徵休息，也常被用來隱喻死亡、平靜與未知。",s:"🌙",q:"To sleep: perchance to dream: ay, there’s the rub.",p:"Hamlet, Act 3, Scene 1",n:"哈姆雷特思考死亡像睡眠，但睡後是否有夢，卻讓人恐懼。"},
+{w:"Time",ipa:"/taɪm/",m:"時間；時機",d:"時間能帶來改變，也會揭露真相、推動命運。",s:"⌛",q:"Time shall unfold what plighted cunning hides.",p:"King Lear, Act 1, Scene 2",n:"時間終將揭露陰謀所隱藏的真相。"},
+{w:"Virtue",ipa:"/ˈvɜːr.tʃuː/",m:"美德；德行",d:"代表正直、節制與善良等值得追求的品格。",s:"🪷",q:"Love is not love\\nWhich alters when it alteration finds.",p:"Sonnet 116",n:"真正的愛不會因環境改變而輕易動搖，呼應忠貞的品格。"},
+{w:"Wit",ipa:"/wɪt/",m:"機智；才智；風趣",d:"快速理解、巧妙表達或以幽默回應的能力。",s:"🪶",q:"A jest’s prosperity lies in the ear\\nOf him that hears it, never in the tongue\\nOf him that makes it.",p:"Love’s Labour’s Lost, Act 5, Scene 2",n:"笑話是否成功，取決於聽者如何理解，而不只在說者的技巧。"},
+{w:"Xenial",ipa:"/ˈziː.ni.əl/",m:"好客的；賓主友善的",d:"較罕見的文學詞，形容主人與客人之間友善、熱情的關係。",s:"🕯️",q:"I pray you, let us meet\\nAnd question this most bloody piece of work.",p:"Macbeth, Act 2, Scene 3",n:"此詞作為延伸詞彙學習；本句呈現劇中人物面對來客與事件時的場景。"},
+{w:"Youth",ipa:"/juːθ/",m:"青春；年輕時期",d:"象徵生命力、成長與短暫易逝的年華。",s:"🌱",q:"Wisely, and slow. They stumble that run fast.",p:"Romeo and Juliet, Act 2, Scene 3",n:"勞倫斯神父提醒羅密歐不要急躁，也呼應年輕人容易衝動的特質。"},
+{w:"Zeal",ipa:"/ziːl/",m:"熱忱；熱情；狂熱",d:"對信念或目標投入強烈情感；過度時也可能變成盲目的狂熱。",s:"🔥",q:"Though this be madness, yet there is method in’t.",p:"Hamlet, Act 2, Scene 2",n:"波隆尼厄斯認為哈姆雷特看似瘋狂，言行卻似乎另有安排；可延伸思考熱情與執念。"}
+];
+let current=0;
+const el=id=>document.getElementById(id);
+function render(){
+ const x=entries[current], letter=String.fromCharCode(65+current);
+ el('index').textContent=`WORD ${String(current+1).padStart(2,'0')} / 26`;
+ el('letter').textContent=letter;
+ el('word').textContent=x.w;
+ el('ipa').textContent=x.ipa;
+ el('meaning').textContent=x.m;
+ el('definition').textContent=x.d;
+ el('symbol').textContent=x.s;
+ el('quote').innerHTML=x.q.replace(/\\n/g,'<br>');
+ el('source').textContent='— '+x.p;
+ el('note').textContent=x.n;
+ el('progress').style.width=((current+1)/26*100)+'%';
+ el('prev').disabled=current===0;el('next').disabled=current===25;
+ document.querySelectorAll('.alphabet button').forEach((b,i)=>b.classList.toggle('active',i===current));
+}
+function speak(text){
+ if(!('speechSynthesis'in window)){alert('此瀏覽器不支援語音播放，建議使用最新版 Chrome。');return;}
+ speechSynthesis.cancel();
+ const u=new SpeechSynthesisUtterance(text);u.lang='en-GB';u.rate=.82;
+ speechSynthesis.speak(u);
+}
+entries.forEach((x,i)=>{const b=document.createElement('button');b.textContent=String.fromCharCode(65+i);b.type='button';b.title=x.w;b.addEventListener('click',()=>{current=i;render();});el('alphabet').appendChild(b);});
+el('prev').onclick=()=>{if(current>0){current--;render();}};
+el('next').onclick=()=>{if(current<25){current++;render();}};
+el('speakWord').onclick=()=>speak(entries[current].w);
+el('speakQuote').onclick=()=>speak(entries[current].q.replace(/\\n/g,' '));
+document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'&&current>0){current--;render();}if(e.key==='ArrowRight'&&current<25){current++;render();}});
+render();
+</script>
+</body></html>
